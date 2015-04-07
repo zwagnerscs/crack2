@@ -21,6 +21,15 @@ int tryguess(char *hash, char *guess)
     return 0;
 }
 
+// Read in a file and return the array of strings.
+// Use the technique we showed in class to expand the
+// array as you go.
+char **readfile(char *filename)
+{
+    return NULL;
+}
+
+
 int main(int argc, char *argv[])
 {
     if (argc < 3) 
@@ -29,11 +38,11 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    // Read the hash file into an array of strings (2D array).
-    // The first line of the file contains the number of lines in the file.
+    // Read the hash file into an array of strings
+    char **hashes = readfile(fill this in);
 
-    // Read the dictionary file into an array of strings (2D array).
-    // The first line of the file contains the number of lines in the file.
+    // Read the dictionary file into an array of strings
+    char **dict = readfile(fill this in);
 
     // For each hash, try every entry in the dictionary.
     // Print the matching dictionary entry.
