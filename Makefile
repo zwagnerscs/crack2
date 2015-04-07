@@ -19,11 +19,17 @@ hashpass.o: hashpass.c md5.h
 
 # Add a recipe to build crack out of crack.o and md5.o.
 # See the rule for hashpass above.
+# Remove the "@echo" lines.
 crack: crack.o md5.o
+	@echo No rule for building the executable.
+	@echo "  Modify the Makefile first."
 
 
 # Add a recipe to build crack.o out of crack.c
+# Remove the "@echo" lines.
 crack.o: crack.c md5.h
+	@echo No rule for building crack.o
+	@echo "  Modify the Makefile first"
 
 
 hashes: hashpass
