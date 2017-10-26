@@ -2,6 +2,7 @@
 #include <string.h>
 #include "md5.h"
 #include "sha256.h"
+#include <stdlib.h>
 
 int main()
 {
