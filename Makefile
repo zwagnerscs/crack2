@@ -10,7 +10,7 @@ all: hashpass crack
 # This rule links hashpass.o and md5.o along with the
 # libssl and libcrypto libraries to make the executable.
 hashpass: hashpass.o md5.o
-	$(CC) hashpass.o md5.o -o hashpass -l ssl -l crypto
+	$(CC) hashpass.o md5.o -o hashpass -l crypto
 
 md5.o: md5.c md5.h
 	$(CC) $(CFLAGS) -c md5.c -Wall
