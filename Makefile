@@ -2,8 +2,15 @@
 
 CC=clang
 CFLAGS=-g
+
+# The number of random hashes to pull from the rockyou file
 NUM_HASHES=20
+
+# Which rockyou file to use
 ROCKYOU=rockyou100.txt
+#ROCKYOU=rockyou1000.txt
+#ROCKYOU=rockyou2000.txt
+#ROCKYOU=rockyou1m.txt
 
 all: hashpass crack
 
@@ -38,6 +45,9 @@ hashes: hashpass
 	./hashpass < passwords.txt > hashes.txt
 
 hashes.txt: hashes
+
+rockyou1m.txt: rockyou1m.txt.gz
+	gunzip rockyou1m.txt.gz
 
 clean:
 	rm -f *.o hashpass crack hashes.txt passwords.txt
