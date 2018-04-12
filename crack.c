@@ -4,7 +4,7 @@
 
 #include "md5.h"
 
-const int PASS_LEN=20;        // Maximum any password can be
+const int PASS_LEN=20;        // Maximum any password will be
 const int HASH_LEN=33;        // Length of MD5 hash strings
 
 // Given a hash and a plaintext guess, return 1 if
@@ -21,11 +21,14 @@ int tryguess(char *hash, char *guess)
     return 0;
 }
 
-// Read in a file and return the array of strings.
-// Use the technique we showed in class to expand the
-// array as you go.
-char **readfile(char *filename)
+// Read in the dictionary file and return the array of strings
+// and store the length of the array in size.
+// This function is responsible for opening the dictionary file,
+// reading from it, building the data structure, and closing the
+// file.
+char **read_dictionary(char *filename, int *size)
 {
+    *size = 0;
     return NULL;
 }
 
@@ -38,11 +41,12 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    // Read the hash file into an array of strings
-    char **hashes = readfile(fill this in);
+    // Read the dictionary file into an array of strings.
+    int dlen;
+    char **dict = read_dictionary(FILL THIS IN);
 
-    // Read the dictionary file into an array of strings
-    char **dict = readfile(fill this in);
+    // Open the hash file for reading.
+    
 
     // For each hash, try every entry in the dictionary.
     // Print the matching dictionary entry.
