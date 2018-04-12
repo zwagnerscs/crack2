@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 
     // Read the dictionary file into an array of strings.
     int dlen;
-    char **dict = read_dictionary(FILL THIS IN);
+    char **dict = read_dictionary(NULL, NULL);
 
     // Open the hash file for reading.
     
