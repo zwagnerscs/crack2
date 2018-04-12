@@ -43,9 +43,6 @@ hashes: hashpass
 
 hashes.txt: hashes
 
-rockyou1m.txt: rockyou1m.txt.gz
-	gunzip rockyou1m.txt.gz
-
 clean:
 	rm -f *.o hashpass crack hashes.txt passwords.txt
 
