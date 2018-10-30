@@ -16,10 +16,10 @@ all: hashpass crack
 hashpass: hashpass.o md5.o
 	clang hashpass.o md5.o -o hashpass -l crypto
 
-md5.o: md5.c md5.h
+md5.o: md5.c
 	clang -g -c md5.c -Wall
 
-hashpass.o: hashpass.c md5.h
+hashpass.o: hashpass.c
 	clang -g -c hashpass.c -Wall
 
 # Add a recipe to build crack out of crack.o and md5.o.
@@ -32,7 +32,7 @@ crack: crack.o md5.o
 
 # Add a recipe to build crack.o out of crack.c
 # Remove the "@echo" lines.
-crack.o: crack.c md5.h
+crack.o: crack.c
 	@echo No rule for building crack.o
 	@echo "  Modify the Makefile first"
 
